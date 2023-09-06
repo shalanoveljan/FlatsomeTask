@@ -11,7 +11,7 @@
 
 #First{
     padding: 20px 0;
-    background-image: url(https://api.time.com/wp-content/uploads/2019/08/better-smartphone-photos.jpg);
+    background-image: url(https://flatsome3.uxthemes.com/wp-content/uploads/2016/02/slide3-1-1000x429.jpg);
     height: 90vh;
     background-position: center;
     background-size: cover;
@@ -254,10 +254,21 @@ color: black;
     -o-transition:0.5s ;
 }
 
+.box::before{
+    content: '';
+    background-color: #334862;
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+}
 
-
-.box:hover{
-
+.box:hover.box::before{ 
+    opacity: 0.4;
 }
 
 .box span{
@@ -360,16 +371,34 @@ font-size: 1.25em;
     width: 89%;
     opacity: 0;
     transition: 0.6s;
-    -webkit-transition: 0.6s;
-    -moz-transition: 0.6s;
-    -ms-transition: 0.6s;
-    -o-transition: 0.6s;
+    
+    
 }
 
+
+.card i{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 20px;
+    padding: 10px;
+    color: #abb8c3;
+    border: 1px solid  #abb8c3;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.6s;
+    
+   
+}
+
+
 .card:hover.card h4{
- 
  opacity: 1;
- 
+}
+
+.card:hover.card i{
+opacity: 1;
+color: red;
 }
 
 @media (max-width:576px) {
@@ -409,9 +438,10 @@ font-size: 1.25em;
     }
 
     .card h4{
+        width: 87%;
         bottom: 22%;
     }
-  
+
 
 }
 
@@ -439,7 +469,8 @@ font-size: 1.25em;
         }
 
         .card h4{
-            bottom: 30%;
+            width: 83%;
+            bottom: 32%;
         }
 
         #Third{
